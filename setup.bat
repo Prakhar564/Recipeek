@@ -17,7 +17,6 @@ REM Installing Python dependencies from requirements.txt...
 call backend\venv\Scripts\python.exe -m pip install -r requirements.txt
 
 
-
 REM REM Navigate to the frontend directory
 cd frontend
 echo Current directory: %cd%
