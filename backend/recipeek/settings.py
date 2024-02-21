@@ -96,10 +96,11 @@ DATABASES = {
         'NAME': 'recipeekdb',
         'USER': os.environ.get('USER'),
         'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': os.environ.get('RDS_HOST'),
+        'HOST': 'recipeekdb-instance.ch2gwsam8xly.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
