@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "ckeditor4": "^4.24.0"
-  },
   "devDependencies": {
     "jest": "^29.7.0"
   }
