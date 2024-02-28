@@ -10,7 +10,7 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
 
     def profile(self):
-        profile = Profile.objects.get(user=self)
+        return Profile.objects.get(user=self)
 
     favorite_ingredients = models.ManyToManyField('Ingredient', related_name='favored_by', blank=True)
     # Redefine groups and user_permissions with a custom related_name
