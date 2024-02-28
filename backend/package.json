@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "ckeditor4": "^4.24.0"
+    "ckeditor4": "^4.24.0",
+    "dotenv": "^16.4.5"
   }
 }
