@@ -1,1 +1,65 @@
-
+.register-container {
+    font-family: 'Roboto', sans-serif;
+    color: #e3e305;
+  }
+  
+  .register-container .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  
+  
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .card-body {
+    background: linear-gradient(120deg, #ac8812 0%, #06b4ff 100%);
+  }
+  
+  input {
+    border-radius: 30px;
+    box-shadow: inset 0 2px 4px rgba(184, 23, 23, 0.1);
+  }
+  
+  input::placeholder {
+    color: #cf0c0c;
+  }
+  
+  button {
+    border-radius: 30px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgb(242, 5, 5);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  .btn-primary {
+    background-color: #4285f4;
+    border-color: #7af442;
+  }
+  
+  footer {
+    background: #7fb9c6;
+    color: #070606;
+    padding: 16px 0;
+  }
+  
+  /* Additional styles can be added to make the form more colorful and visually appealing */
+  
