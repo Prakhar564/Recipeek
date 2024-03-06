@@ -1,1 +1,99 @@
+/* Homepage.css */
 
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eff5f6;
+    color: #0c0c0c;
+  }
+  
+  .main-container {
+    padding: 20px;
+  }
+  
+  .jumbotron {
+    background: linear-gradient(to right, #1e6b0e 0%, #36558b 100%);
+    color: #fff;
+    padding: 60px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  
+  .jumbotron:hover {
+    box-shadow: 0 12px 24px rgba(139, 139, 101, 0.63);
+  }
+  
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+  
+  .jumbotron p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .jumbotron a.btn {
+    background: #fff;
+    color: #528b92;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .jumbotron a.btn:hover {
+    background: #b292e4;
+    color: #fff;
+  }
+  
+  .card {
+    background: #d6cccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h2 {
+    color: #070404;
+  }
+  
+  .card p {
+    color: #060303;
+  }
+  
+  .card a {
+    color: #0e7d10;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 40px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
