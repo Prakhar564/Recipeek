@@ -2,6 +2,8 @@ import {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
 
+import {doCreateUserWithEmailAndPassword, doSocialSignIn} from '../firebase/AuthFunctions'
+import './RegisterPage.css';
 
 function Registerpage() {
 
@@ -9,6 +11,8 @@ function Registerpage() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [password2, setPassword2] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [userID, setUserID] = useState("")
 
   const {registerUser} = useContext(AuthContext)
 
@@ -20,12 +24,43 @@ function Registerpage() {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    registerUser(email, username, password, password2)
+
+    // console.log(`here is my register detail: email-${email}, ${password}`);
+    const loginID = await doCreateUserWithEmailAndPassword(email, password, username)
+    setUserID(loginID)
+    setLoading(true)
+
   }
+
+  const handleGoogleSignIn = async () => {
+    try {
+      
+      await doSocialSignIn();
+      setUserID("Created");
+      console.log("I reached");
+      setLoading(true);
+      // You might need to modify doSocialSignIn to return UID or manage the state differently
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+      setLoading(false);
+    }
+  };
   
 
   return (
-    <div>
+    loading ? (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <div> UserID is successfull {userID}</div>
+      </div>
+    ) : (
+      <div>
       <>
         <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
           <div className="container py-5 h-100">
@@ -105,7 +140,27 @@ function Registerpage() {
                             >
                               Register
                             </button>
+
+                            <head>
+                              <link
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                                rel="stylesheet"
+                             />
+
+                            </head>
+                            
+                            <button
+                             className="btn btn-primary btn-lg btn-block d-flex align-items-center justify-content-center"
+                              type="button"
+                              onClick={handleGoogleSignIn}
+                              style={{ letterSpacing: '3px' }} 
+                              >
+                                <i className="fab fa-google me-2"></i> Sign in with Google
+                              </button>
+
+                          
                           </div>
+                          
                           <a className="small text-muted" href="#!">
                             Forgot password?
                           </a>
@@ -146,6 +201,7 @@ function Registerpage() {
     </>
 
     </div>
+    )
   )
 }
 
