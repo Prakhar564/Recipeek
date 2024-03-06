@@ -1,24 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
+import { doSignInWithEmailAndPassword } from '../firebase/AuthFunctions'
 
 function Loginpage() {
 
   const {loginUser} = useContext(AuthContext)
+  const [loggedIn, setLoggedIn] = useState(false)
   const handleSubmit = e => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
 
-    email.length > 0 && loginUser(email, password)
-
-    console.log(email)
-    console.log(password)
+    email.length > 0 && doSignInWithEmailAndPassword(email, password)
+    console.log("Login Successful");
+    setLoggedIn(true)
    
   }
 
   return (
-    <div>
+    loggedIn ? (
+      <div>
+        Login Successful !! 
+      </div>
+    )
+    : (
+      <div>
       <>
   <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
     <div className="container py-5 h-100">
@@ -124,6 +131,7 @@ function Loginpage() {
 </>
 
     </div>
+    )
   )
 }
 
