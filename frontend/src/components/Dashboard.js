@@ -61,36 +61,25 @@ function Dashboard() {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <span data-feather="file" />
-                Orders
+                Recipe lookup
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <span data-feather="shopping-cart" />
-                Products
+                Ingredients 
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
                 <span data-feather="users" />
-                Customers
+                History
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <span data-feather="bar-chart-2" />
-                Reports
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <span data-feather="layers" />
-                Integrations
-              </a>
-            </li>
+            
           </ul>
           <h6 className="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Saved reports</span>
+            <span>Saved Recipes</span>
             <a className="d-flex align-items-center text-muted" href="#">
               <span data-feather="plus-circle" />
             </a>
@@ -106,18 +95,6 @@ function Dashboard() {
               <a className="nav-link" href="#">
                 <span data-feather="file-text" />
                 Last quarter
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <span data-feather="file-text" />
-                Social engagement
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <span data-feather="file-text" />
-                Year-end sale
               </a>
             </li>
           </ul>
@@ -142,10 +119,10 @@ function Dashboard() {
             </button>
           </div>
         </div>
-        <div className='alert alert-success'>
+        {/* <div className='alert alert-success'>
           <strong>{res}</strong>
-        </div>
-        <h2>Section title</h2>
+        </div> */}
+        <h2>List of Ingredients</h2>
         <div className="table-responsive">
           <table className="table table-striped table-sm">
             <thead>

@@ -9,17 +9,21 @@ import Registerpage from './components/Registerpage'
 import Loginpage from './components/Loginpage'
 import Dashboard from './components/Dashboard'
 import Navbar from './components/Navbar'
+import Test from './components/test'
+import AIAssistant from './components/aiAssistant'
 
 function App() {
   return (
     <Router>
       <AuthProvider>
-        < Navbar/>
+        {/* < Navbar/> */}
         <Switch>
           <PrivateRoute component={Dashboard} path="/dashboard" exact />
           <Route component={Loginpage} path="/login" />
           <Route component={Registerpage} path="/register" exact />
           <Route component={Homepage} path="/" exact />
+          <Route component={Test} path="/test" exact />
+          <Route component={AIAssistant} path="/testai" exact />
         </Switch>
       </AuthProvider>
     </Router>
