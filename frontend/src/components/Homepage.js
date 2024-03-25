@@ -19,7 +19,7 @@ const Homepage = (props) => {
           className="navbarContainer home-navbar-interactive"
         >
           <span className="logo">RECIPEEK</span>
-          <div data-thq="thq-navbar-nav" className="home-desktop-menu">
+          {/* <div data-thq="thq-navbar-nav" className="home-desktop-menu">
             <nav className="home-links">
               <span className="bodySmall">Home</span>
               <span className="home-nav22 bodySmall">Features</span>
@@ -31,7 +31,7 @@ const Homepage = (props) => {
               <button className="home-login buttonFlat">Login</button>
               <button className="buttonFilled">Register</button>
             </div>
-          </div>
+          </div> */}
           <div data-thq="thq-burger-menu" className="home-burger-menu">
             <svg viewBox="0 0 1024 1024" className="home-icon socialIcons">
               <path d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
