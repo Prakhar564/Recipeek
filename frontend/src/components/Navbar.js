@@ -1,62 +1,70 @@
-import {useContext} from 'react'
-import jwt_decode from "jwt-decode"
-import AuthContext from '../context/AuthContext'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import AuthContext from '../context/AuthContext';
+import { ThemeContext } from '../App'; // Adjust the import path as necessary
+import ReactSwitch from 'react-switch';
 
 function Navbar() {
+  const { user, logoutUser } = useContext(AuthContext);
+  const { theme, toggleTheme } = useContext(ThemeContext); // Accessing theme context
+  const token = localStorage.getItem('authTokens');
 
-  const {user, logoutUser} = useContext(AuthContext)
-  const token = localStorage.getItem("authTokens")
-
-  if (token){
-    const decoded = jwt_decode(token) 
-    var user_id = decoded.user_id
+  let user_id;
+  if (token) {
+    const decoded = jwt_decode(token);
+    user_id = decoded.user_id; // Using let above allows us to assign to user_id here
   }
 
   return (
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img style={{width:"80px", padding:"0px"}} src="supermarket.png" alt="" />
-
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">
+            <img style={{ width: '80px', padding: '0px' }} src="supermarket.png" alt="" />
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
               </li>
-              {token === null && 
-              <>
-                <li class="nav-item">
-                  <Link class="nav-link" to="/login">Login</Link>
-                </li>
-                <li class="nav-item">
-                  <Link class="nav-link" to="/register">Register</Link>
-                </li>
-              </>
-              }
+              {!token && (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">Login</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/register">Register</Link>
+                  </li>
+                </>
+              )}
 
-            {token !== null && 
-              <>
-                <li class="nav-item">
-                  <a class="nav-link" href="/dashboard">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" onClick={logoutUser} style={{cursor:"pointer"}}>Logout</a>
-                </li>
-              </>
-              }   
-              
+              {token && (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/dashboard">Dashboard</Link>
+                  </li>
+                  <li className="nav-item">
+                    <span className="nav-link" onClick={logoutUser} style={{ cursor: 'pointer' }}>Logout</span>
+                  </li>
+                </>
+              )}
+              {/* Theme toggle switch */}
+              <li className="nav-item">
+                <div className="nav-link">
+                  <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
+                  <span style={{ marginLeft: '10px' }}>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</span>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
