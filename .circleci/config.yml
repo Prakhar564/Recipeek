@@ -1,12 +1,30 @@
 version: 2.1
 jobs:
-  build:
+  build_test:
     docker:
-      - image: circleci/node:21.6.1
-
-    working_directory: ~/repo
-
+      - image: circleci/node:21
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
+      - run: 
+          name: Install npm dependencies
+          command: |
+            npm install --save
+      build_docker_image:
+        docker:
+          - image: circleci/node:21
+        steps:
+          - checkout
+          - setup_remote_docker: 
+              docker_layer_caching: false
+          - run:
+              name: Build Docker image
+              command: |
+                docker build -t nodejswebapp1 -t sarthaktejale/recipeek:tagname .
+                echo $DOCKER_PASSWORD | docker login -u sarthaktejale --password-Sarthak@15
+                docker push sarthaktejale/recipeek:tagname
+
+workflows:
+  build_test:
+    jobs:
+      - build_test
+      - builder_docker_image
