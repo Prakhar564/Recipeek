@@ -11,129 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
-
-/* AI component*/
-
-.app {
-  padding-top: 105px;
-  background-color: #343541;
-  display: flex;
-  height: 100vh;
-}
-
-.side-bar{
-  background-color: #202123;
-  height: 100vh;
-  width: 244px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 89.5vh;
-}
-
-button {
-  color: rgb(255, 255, 255);
-  border: solid 0.5px rgba(255, 255, 255, 0.5);
-  background-color: transparent;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.chatbox {
-  height: 100vh;
-  width: 100%;
-  color:  rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
-.history {
-  padding: 10px;
-  margin: 10px;
-  height: 100%;
-}
-
-.history li {
-  list-style-type: none;
-  color: rgb(255, 255, 255);
-  padding: 15px 0;
-  cursor: pointer;
-} 
-
-.input-container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-}
-
-input{
-  color: #ffffff;
-  font-size: 20px;
-  width: 100%;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 12px 15px;
-  border-radius: 5px;
-  box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
-    rgba(0,0,0,0.05) 0 -12px 30px,
-    rgba(0,0,0,0.05) 0 4px 6px,
-    rgba(0,0,0,0.05) 0 12px 3px,
-    rgba(0,0,0,0.05) 0 -3px 5px,
-}
-
-input:focus {
-  outline: none;
-}
-
-.bottom-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10vh;
-  padding-bottom: 20vh;
-}
-
-#submit {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.feed {
-  overflow: scroll;
-  width: 90%;
-  padding: 0;
-}
-
-.feed li {
-  display: flex;
-  background-color: #444654;
-  width: 100%;
-  padding: 20px;
-  margin-top: 10px 0;
-}
-
-.feed p {
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  text-align: left;
-}
-
-.feed p.role {
-  min-width: 100px;
-}
-
-/* AI component*/
-
-
-
 /* Container styling */
 .app-component-container {
   width: 100%;
@@ -183,6 +60,8 @@ input:focus {
     flex-direction: column;
   }
 }
+
+
 
 /* Homepage styling */
 .home-container {
@@ -1065,11 +944,79 @@ input:focus {
   }
 }
 
+
+/* Light Theme Styles */
+.light-theme {
+  background-color: #fff;
+  color: #000000;
+  /* Additional light theme styles */
+}
+
+.light-theme .navbar, .light-theme .footerContainer {
+  background-color: #f8f9fa;
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+  background-color: #000000;
+  color: #fff;
+  /* Additional dark theme styles */
+}
+
+.dark-theme .navbar, .dark-theme .footerContainer {
+  background-color: #000000;
+}
+
+/* You might want to customize further for specific components/texts within the dark or light theme */
+.dark-theme .home-header, .dark-theme .home-footer {
+  background-color: #000000;
+}
+
+.dark-theme .home-hero, .dark-theme .feature-card-container, .dark-theme .home-pricing, .dark-theme .home-banner, .dark-theme .home-faq {
+  background-color: #000000;
+}
+
+.light-theme .home-header, .light-theme .home-footer {
+  background-color: #f8f9fa;
+}
+
+.light-theme .home-hero, .light-theme .feature-card-container, .light-theme .home-pricing, .light-theme .home-banner, .light-theme .home-faq {
+  background-color: #fff;
+}
+
+
+/* Light theme - adjustments or additions */
+.light-theme .card, .light-theme .form-control, .light-theme footer {
+  background-color: #fff;
+  color: #000000;
+}
+
+/* Dark theme - adjustments or additions */
+.dark-theme .card, .dark-theme .form-control, .dark-theme footer {
+  background-color: #000000;
+  color: #fff;
+}
+
+.dark-theme .form-label {
+  color: #ccc;
+}
+
+/* Further customization based on your needs */
+
+
 /* overall styling */
 :root {
-  --dl-color-gray-500: #595959;
-  --dl-color-gray-700: #999999;
-  --dl-color-gray-900: #D9D9D9;
+  --dl-color-primary: #6200EA; 
+  --dl-color-secondary: #03DAC6; /* A teal for secondary actions */
+  --dl-color-background: #FFFFFF; /* White background for light theme */
+  --dl-color-background-dark: #121212; /* Dark grey for dark theme */
+  --dl-color-text: #000000; /* Black text for light theme */
+  --dl-color-text-dark: #FFFFFF; /* White text for dark theme */
+  --dl-border-radius: 8px; /* Rounded corners for elements */
+  --dl-transition-speed: 0.3s; /* Standard speed for transitions */
+  --dl-color-gray-500: #000000;
+  --dl-color-gray-700: #922020;
+  --dl-color-gray-900: #0b0b0b;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
   --dl-color-danger-300: #A22020;
@@ -1091,8 +1038,8 @@ input:focus {
   --dl-size-size-xxlarge: 288px;
   --dl-size-size-maxwidth: 1400px;
   --dl-radius-radius-round: 50%;
-  --dl-color-custom-accent1: #71B556;
-  --dl-color-custom-accent2: #89ADF6;
+  --dl-color-custom-accent1: #c9471b;
+  --dl-color-custom-accent2: #19dd20;
   --dl-space-space-halfunit: 8px;
   --dl-space-space-sixunits: 96px;
   --dl-space-space-twounits: 32px;
@@ -1105,51 +1052,93 @@ input:focus {
   --dl-space-space-fourunits: 64px;
   --dl-space-space-threeunits: 48px;
   --dl-color-custom-secondary1: #D6E3FE;
-  --dl-color-custom-neutral-dark: #1A1A1A;
+  --dl-color-custom-neutral-dark: #000000;
   --dl-color-custom-neutral-light: #FFFFFF;
+  --background-color-light: #FFFFFF;
+  --background-color-dark: #000000;
   --dl-space-space-oneandhalfunits: 24px;
 }
+
+[data-theme="light"] {
+  --background-color: var(--background-color-light);
+}
+
+[data-theme="dark"] {
+  --background-color: var(--background-color-dark);
+}
+
+.button, .buttonFilled, .buttonFilledSecondary {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: background-color var(--dl-transition-speed), box-shadow var(--dl-transition-speed);
+  cursor: pointer;
+  border: none;
+}
+
 .button {
-  color: var(--dl-color-gray-black);
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-primary);
+  color: var(--dl-color-text-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
-.input {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem 1rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+
+.button:hover {
+  background-color: lighten(var(--dl-color-primary), 10%);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.25);
 }
-.textarea {
-  color: var(--dl-color-gray-black);
-  cursor: auto;
-  padding: 0.5rem;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: var(--dl-color-gray-white);
+
+/* Filled buttons with gradient backgrounds */
+.buttonFilled {
+  background-image: linear-gradient(45deg, var(--dl-color-primary), var(--dl-color-secondary));
+  color: var(--dl-color-text-dark);
 }
+
+.buttonFilled:hover {
+  background-image: linear-gradient(45deg, darken(var(--dl-color-primary), 10%), darken(var(--dl-color-secondary), 10%));
+}
+
+.buttonFilledSecondary {
+  background-color: var(--dl-color-secondary);
+  color: var(--dl-color-text);
+}
+
+.buttonFilledSecondary:hover {
+  background-color: lighten(var(--dl-color-secondary), 10%);
+}
+
+/* Input and textarea enhancements */
+.input, .textarea {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dl-color-background);
+  color: var(--dl-color-text);
+  border: 2px solid var(--dl-color-primary);
+  transition: border-color var(--dl-transition-speed), box-shadow var(--dl-transition-speed);
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--dl-color-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* List styling for modern look */
 .list {
-  width: 100%;
-  margin: 1em 0px 1em 0px;
-  display: block;
-  padding: 0px 0px 0px 1.5rem;
-  list-style-type: none;
-  list-style-position: outside;
+  padding-left: 0;
 }
+
 .list-item {
-  display: list-item;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--dl-color-primary);
 }
+
+/* Special effects for certain classes */
 .teleport-show {
-  display: flex !important;
-  transform: none !important;
+  animation: fadeIn var(--dl-transition-speed) ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .buttonFilled {
   color: var(--dl-color-custom-neutral-light);
@@ -1211,13 +1200,14 @@ input:focus {
 }
 .featuresContainer {
   flex: 0 0 auto;
-  color: var(--dl-color-custom-neutral-dark);
+  color: var(--features-text-color); 
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--dl-color-custom-secondary1);
+  background-color: var(--features-background-color); 
+  transition: background-color var(--transition-speed), color var(--transition-speed); 
 }
 .featuresCard {
   width: 100%;
@@ -1227,14 +1217,16 @@ input:focus {
   border-radius: 4px;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: var(--dl-color-custom-neutral-light);
+  background-color: var(--background-color); 
+  transition: background-color 0.3s; 
 }
 .featuresIcon {
-  fill: var(--dl-color-custom-neutral-dark);
+  fill: var(--icon-fill-color); /* Use variable for fill color */
   width: 2rem;
   height: 2rem;
   flex-shrink: 0;
   margin-right: var(--dl-space-space-oneandhalfunits);
+  transition: fill var(--transition-speed); /* Smooth transition for theme change */
 }
 .freePricingCard {
   gap: var(--dl-space-space-twounits);
@@ -1277,13 +1269,14 @@ input:focus {
 }
 .faqContainer {
   flex: 0 0 auto;
-  color: var(--dl-color-custom-neutral-dark);
+  color: var(--text-color); /* Use variable for text color */
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  background-color: var(--dl-color-custom-secondary1);
+  background-color: var(--background-color-faq); /* Use variable for background color */
+  transition: color var(--transition-speed), background-color var(--transition-speed); /* Smooth transition for theme change */
 }
 .navbarContainer {
   width: 100%;
@@ -1324,7 +1317,8 @@ input:focus {
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fourunits);
   justify-content: center;
-  background-color: var(--dl-color-custom-neutral-light);
+  background-color: var(--background-color); 
+  transition: background-color var(--transition-speed); 
 }
 .bannerContainer {
   width: 100%;
@@ -1336,7 +1330,8 @@ input:focus {
   flex-direction: column;
   padding-bottom: var(--dl-space-space-sixunits);
   justify-content: space-between;
-  background-color: var(--dl-color-custom-neutral-light);
+  background-color: var(--background-color); 
+  transition: background-color 0.3s; 
 }
 .footerContainer {
   width: 100%;
@@ -1348,10 +1343,22 @@ input:focus {
   flex-direction: column;
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
-  background-color: var(--dl-color-custom-neutral-light);
+  background-color: var(--background-color-footer); /* Use variable for background color */
+  transition: background-color var(--transition-speed); /* Optional: Smooth transition for theme change */
 }
+
+/* Light theme colors */
+.light-theme {
+  --social-icon-color: #000; /* Dark color for light theme */
+}
+
+/* Dark theme colors */
+.dark-theme {
+  --social-icon-color: #fff; /* Light color for dark theme */
+}
+
 .socialIcons {
-  fill: var(--dl-color-custom-neutral-dark);
+  fill: var(--social-icon-color);
 }
 .Heading {
   font-size: 32px;
