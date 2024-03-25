@@ -11,6 +11,125 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+/* AI component*/
+
+.app {
+  background-color: #343541;
+  display: flex;
+}
+
+.side-bar{
+  background-color: #202123;
+  height: 100vh;
+  width: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.chatbox {
+  height: 100vh;
+  width: 100%;
+  color:  rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.history {
+  padding: 10px;
+  margin: 10px;
+  height: 100%;
+}
+
+.history li {
+  list-style-type: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 0;
+  cursor: pointer;
+} 
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+input{
+  color: #ffffff;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0,0,0,0.05) 0 54px 55px,
+    rgba(0,0,0,0.05) 0 -12px 30px,
+    rgba(0,0,0,0.05) 0 4px 6px,
+    rgba(0,0,0,0.05) 0 12px 3px,
+    rgba(0,0,0,0.05) 0 -3px 5px,
+}
+
+input:focus {
+  outline: none;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+}
+
+#submit {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.feed {
+  overflow: scroll;
+  width: 90%;
+  padding: 0;
+}
+
+.feed li {
+  display: flex;
+  background-color: #444654;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px 0;
+}
+
+.feed p {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-align: left;
+}
+
+.feed p.role {
+  min-width: 100px;
+}
+
+/* AI component*/
+
+
+
 /* Container styling */
 .app-component-container {
   width: 100%;
