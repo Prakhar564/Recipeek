@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
+import { ThemeContext } from '../App';
 
 function Loginpage() {
 
   const {loginUser} = useContext(AuthContext)
+  const { theme } = useContext(ThemeContext)
   const handleSubmit = e => {
     e.preventDefault()
     const email = e.target.email.value
@@ -18,7 +20,7 @@ function Loginpage() {
   }
 
   return (
-    <div>
+    <div className={theme}>
       <>
   <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
     <div className="container py-5 h-100">
