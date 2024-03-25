@@ -9,7 +9,7 @@ import Registerpage from './components/Registerpage'
 import Loginpage from './components/Loginpage'
 import Dashboard from './components/Dashboard'
 import Navbar from './components/Navbar'
-
+import Chatbot from './components/Chatbot'
 function App() {
   return (
     <Router>
@@ -20,6 +20,7 @@ function App() {
           <Route component={Loginpage} path="/login" />
           <Route component={Registerpage} path="/register" exact />
           <Route component={Homepage} path="/" exact />
+          <Route component={Chatbot} path="/testai" exact />
         </Switch>
       </AuthProvider>
     </Router>
