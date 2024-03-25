@@ -1,7 +1,7 @@
 import {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
-
+import { ThemeContext } from '../App';
 
 function Registerpage() {
 
@@ -11,6 +11,7 @@ function Registerpage() {
   const [password2, setPassword2] = useState("")
 
   const {registerUser} = useContext(AuthContext)
+  const { theme } = useContext(ThemeContext)
 
   console.log(email);
   console.log(username);
@@ -25,7 +26,7 @@ function Registerpage() {
   
 
   return (
-    <div>
+    <div className={theme}>
       <>
         <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
           <div className="container py-5 h-100">
