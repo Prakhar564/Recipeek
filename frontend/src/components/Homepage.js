@@ -17,7 +17,7 @@ const Homepage = (props) => {
         <meta property="og:title" content="Charming Imaginary Sparrow" />
       </Helmet>
       <div className="home-header">
-        <header
+        {/* <header
           data-thq="thq-navbar"
           className="navbarContainer home-navbar-interactive"
         >
@@ -89,7 +89,7 @@ const Homepage = (props) => {
               </svg>
             </div>
           </div>
-        </header>
+        </header> */}
       </div>
       <div className="home-hero">
         <div className="home-hero1 heroContainer">

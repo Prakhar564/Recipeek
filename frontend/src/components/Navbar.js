@@ -4,6 +4,7 @@ import jwt_decode from 'jwt-decode';
 import AuthContext from '../context/AuthContext';
 import { ThemeContext } from '../App'; // Adjust the import path as necessary
 import ReactSwitch from 'react-switch';
+import '../index.css'
 
 function Navbar() {
   const { user, logoutUser } = useContext(AuthContext);
