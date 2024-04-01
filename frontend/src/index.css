@@ -1550,9 +1550,11 @@ code {
 
 /* Dashboard */
 .dashboard-container {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   display: flex;
-  z-index: 100;
+  
   overflow: auto;
   box-shadow: 5px 5px 10px 0px #d4d4d4;
   min-height: 100vh;
@@ -1587,14 +1589,17 @@ code {
   flex-direction: column;
 }
 .dashboard-navlink {
+  color: #000;
   margin-bottom: var(--dl-space-space-threeunits);
   text-decoration: none;
 }
 .dashboard-navlink1 {
+  color: #000;
   margin-bottom: var(--dl-space-space-threeunits);
   text-decoration: none;
 }
 .dashboard-navlink2 {
+  color: #000;
   margin-bottom: var(--dl-space-space-threeunits);
   text-decoration: none;
 }
@@ -1602,6 +1607,7 @@ code {
   margin-bottom: var(--dl-space-space-threeunits);
 }
 .dashboard-navlink3 {
+  color: #000;
   text-decoration: none;
 }
 .dashboard-icon {
@@ -1619,11 +1625,12 @@ code {
   height: var(--dl-size-size-xsmall);
 }
 .dashboard-hero {
+  position: absolute;
   width: 100%;
   display: flex;
   padding: var(--dl-space-space-twounits);
   max-width: var(--dl-size-size-maxwidth);
-  min-height: 80vh;
+  height: 500px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -1681,7 +1688,7 @@ code {
   padding-right: var(--dl-space-space-threeunits);
 }
 .dashboard-steps {
-  top: 4px;
+  top: 100px;
   left: 291px;
   width: 1254px;
   height: 340px;
@@ -2934,6 +2941,7 @@ code {
   text-decoration: none;
 }
 .sidebar-navlink1 {
+  
   margin-bottom: var(--dl-space-space-threeunits);
   text-decoration: none;
 }

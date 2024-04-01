@@ -68,7 +68,8 @@ const Dashboard = (props) => {
             <button className="dashboard-button button">Get Started</button>
             <button className="dashboard-button1 button">Learn More</button>
           </div>
-          {/* <span className="dashboard-text04">
+          {
+          /* <span className="dashboard-text04">
             <span>
               <span>
                 

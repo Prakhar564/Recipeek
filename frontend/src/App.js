@@ -10,6 +10,8 @@ import Registerpage from './components/Registerpage';
 import Loginpage from './components/Loginpage';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
+import RecipeBook from './components/Recipe-book';
+import SmartCooking from './components/Smart-cooking';
 
 export const ThemeContext = createContext(null);
 
@@ -32,6 +34,8 @@ function App() {
               <Route component={Loginpage} path="/login" />
               <Route component={Registerpage} path="/register" exact />
               <Route component={Homepage} path="/" exact />
+              <RecipeBook/>
+              <SmartCooking/>
             </Switch>
           </div>
         </ThemeContext.Provider>
