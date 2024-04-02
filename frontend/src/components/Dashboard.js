@@ -1,16 +1,20 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet'
-
+import { ThemeContext } from '../App'; 
 import TestimonialCard2 from './Testimonial-card2-testimonial-card'
 import TestimonialCard from './Testimonial-card-testimonial-card'
 import TestimonialCard1 from './Testimonial-card1-testimonial-card'
 import '../index.css'
 
 const Dashboard = (props) => {
+
+  const { theme } = useContext(ThemeContext); 
+  const themeClassName = theme === 'dark' ? 'dark-theme' : 'light-theme';
+
+
   return (
-    <div className="dashboard-container">
+    <div className={`dashboard-container ${themeClassName}`}>
       <Helmet>
         <title>Dashboard - Charming Imaginary Sparrow</title>
         <meta

@@ -34,6 +34,7 @@ function App() {
               <Route component={Loginpage} path="/login" />
               <Route component={Registerpage} path="/register" exact />
               <Route component={Homepage} path="/" exact />
+              <Dashboard />
               <RecipeBook/>
               <SmartCooking/>
             </Switch>

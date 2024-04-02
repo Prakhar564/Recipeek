@@ -1147,7 +1147,7 @@ code {
   --dl-color-danger-300: #A22020;
   --dl-color-danger-500: #BF2626;
   --dl-color-danger-700: #E14747;
-  --dl-color-gray-black: #000000;
+  --dl-color-gray-black: #ffffff;
   --dl-color-gray-white: #FFFFFF;
   --dl-size-size-medium: 96px;
   --dl-size-size-xlarge: 192px;
@@ -1182,6 +1182,19 @@ code {
   --background-color-light: #FFFFFF;
   --background-color-dark: #000000;
   --dl-space-space-oneandhalfunits: 24px;
+  --background-gradient-light: linear-gradient(to right, #383838 0%, #f1ef7c 100%);
+  --background-gradient-dark: linear-gradient(to right, #000000 0%, #000000 100%);
+  
+}
+
+
+
+.light-theme {
+  --background-gradient: var(--background-gradient-light);
+}
+
+.dark-theme {
+  --background-gradient: var(--background-gradient-dark);
 }
 
 [data-theme="light"] {
@@ -1549,6 +1562,51 @@ code {
 }
 
 /* Dashboard */
+
+
+/* Base styles */
+.dashboard-container {
+  display: flex;
+}
+
+.dashboard-sidebar {
+  padding: 20px;
+  min-width: 200px;
+}
+
+.dashboard-main-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* Light theme styles */
+.light .dashboard-sidebar {
+  /* Linear gradient example - adjust colors as needed */
+  background: linear-gradient(to bottom, #9dfe00 0%, #00fe9d 100%);
+  color: #000;
+}
+
+.light .dashboard-main-content {
+  background-color: #9dfe00; /* Solid color background */
+  color: #000;
+}
+
+
+.light nav a {
+  color: #070707;
+}
+
+/* Dark theme styles */
+.dark .dashboard-sidebar,
+.dark .dashboard-main-content {
+  background-color: #000000;
+  color: #fff;
+}
+
+.dark nav a {
+  color: #ffffff;
+}
+
 .dashboard-container {
   position: relative;
   overflow: hidden;
@@ -1556,13 +1614,13 @@ code {
   display: flex;
   
   overflow: auto;
-  box-shadow: 5px 5px 10px 0px #d4d4d4;
+  box-shadow: 5px 5px 10px 0px #a73333;
   min-height: 100vh;
   align-items: center;
   border-color: var(--dl-color-gray-black);
   border-width: 1px;
   flex-direction: column;
-  background-image: linear-gradient(to right, #bdc3c7 0%, #2c3e50 100%);
+  background-image: var(--background-gradient);
 }
 
 .dashboard-sidebar {
@@ -1576,7 +1634,6 @@ code {
   align-items: stretch;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #e4af10;
 }
 .dashboard-text {
   
@@ -1660,27 +1717,39 @@ code {
   flex-direction: row;
 }
 .dashboard-button {
-  color: var(--dl-color-gray-white);
-  transition: 0.3s;
-  padding-top: var(--dl-space-space-unit);
-  padding-left: var(--dl-space-space-twounits);
-  padding-right: var(--dl-space-space-twounits);
-  padding-bottom: var(--dl-space-space-unit);
-  background-color: var(--dl-color-gray-black);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Define a background color if not already defined */
+  background-color: #ff0000; /* Example blue */
+  color: #fff; /* White text */
+  border: none; /* Remove border if any */
+  padding: 10px 30px; /* Example padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-right: 15px;
 }
 .dashboard-button:hover {
-  transform: scale(1.02);
+  transform: scale(1.05); /* Slightly larger scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  background-color: #0056b3; /* Darker shade of button color for depth */
 }
 .dashboard-button1 {
-  transition: 0.3s;
-  margin-left: var(--dl-space-space-unit);
-  padding-top: var(--dl-space-space-unit);
-  padding-left: var(--dl-space-space-twounits);
-  padding-right: var(--dl-space-space-twounits);
-  padding-bottom: var(--dl-space-space-unit);
+  /* Initial button styles */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Define a background color if not already defined */
+  background-color: #8c00ff; /* Example blue */
+  color: #fff; /* White text */
+  border: none; /* Remove border if any */
+  padding: 10px 30px; /* Example padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  
 }
 .dashboard-button1:hover {
-  transform: scale(1.02);
+  transform: scale(1.05); /* Slightly larger scale */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  background-color: #0056b3; /* Darker shade of button color for depth */
 }
 .dashboard-text04 {
   margin-top: var(--dl-space-space-twounits);
@@ -1750,7 +1819,7 @@ code {
   border-radius: var(--dl-radius-radius-round);
   flex-direction: row;
   justify-content: center;
-  background-color: #f5f5f5ff;
+  background-color: rgb(255, 0, 0);
 }
 .dashboard-icon06 {
   width: 24px;
@@ -1786,7 +1855,7 @@ code {
   margin-bottom: var(--dl-space-space-unit);
 }
 .dashboard-text21 {
-  color: #f3eded;
+  color: #ffffff;
   font-size: 0.75rem;
   text-align: center;
 }
@@ -1828,7 +1897,7 @@ code {
   border-radius: var(--dl-radius-radius-round);
   flex-direction: row;
   justify-content: center;
-  background-color: #f5f5f5ff;
+  background-color: rgb(106, 255, 0);
 }
 .dashboard-icon08 {
   fill: var(--dl-color-gray-500);
@@ -1921,7 +1990,7 @@ code {
   border-radius: var(--dl-radius-radius-round);
   flex-direction: row;
   justify-content: center;
-  background-color: #f5f5f5ff;
+  background-color: rgb(255, 251, 0);
 }
 .dashboard-icon12 {
   width: 24px;
@@ -2002,7 +2071,7 @@ code {
   border-radius: var(--dl-radius-radius-round);
   flex-direction: row;
   justify-content: center;
-  background-color: #f5f5f5ff;
+  background-color: rgb(242, 0, 255);
 }
 .dashboard-icon15 {
   width: 24px;
