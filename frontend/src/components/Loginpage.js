@@ -116,7 +116,8 @@ function Loginpage() {
   <footer className="bg-light text-center text-lg-start">
     <div
       className="text-center p-3"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      style={{ backgroundColor: "#FAD2E1" }}
+
     >
       © 2019 - till date Copyright:
       <a className="text-dark" href="https://mdbootstrap.com/">

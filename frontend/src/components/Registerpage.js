@@ -2,7 +2,7 @@ import {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
 import { ThemeContext } from '../App';
-
+import '../index.css'
 function Registerpage() {
 
   const [email, setEmail] = useState("")
@@ -110,9 +110,9 @@ function Registerpage() {
                           <a className="small text-muted" href="#!">
                             Forgot password?
                           </a>
-                          <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                          <p className="mb-5 pb-lg-2" style={{ color: "#556270" }}>
                             Already have an account?{" "}
-                            <Link to="/login" style={{ color: "#393f81" }}>
+                            <Link to="/login" style={{ color: "#EF476F" }}> 
                               Login Now
                             </Link>
                           </p>
@@ -135,7 +135,8 @@ function Registerpage() {
           {/* Copyright */}
           <div
             className="text-center p-3"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+            style={{ backgroundColor: "#FAD2E1" }}
+
           >
             © 2019 - till date Copyright:
             <a className="text-dark" href="https://mdbootstrap.com/">

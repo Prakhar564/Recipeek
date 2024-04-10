@@ -186,6 +186,112 @@ code {
 }
 
 
+/* Register/Login Page Styling*/
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: #eaf07f;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header */
+.header {
+  background-color: #9A626D;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border-color: #ff6219;
+  box-shadow: none;
+}
+
+/* Buttons */
+.btn {
+  background-color: #ff6219;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #ffd900;
+}
+
+.btn-lg {
+  padding: 12px 25px;
+  font-size: 20px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Footer */
+footer.bg-light {
+  background-color: #000000!important;
+  color: #000000;
+}
+
+footer a.text-dark {
+  color: #000000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-3 {
+  padding: 1rem!important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-none.d-md-block {
+    display: none!important;
+  }
+
+  .card {
+    margin: 0 15px;
+  }
+}
 
 /* Homepage styling */
 .home-container {
