@@ -1,1 +1,21 @@
-{ "setupFiles": [ "raf/polyfill", "<rootDir>/setupTest.js" ] }
+{
+    "collectCoverage": true,
+    "collectCoverageFrom": [ "src/**/*.{js,jsx}" ],
+    "coverageDirectory": "public/coverage/",
+    "moduleFileExtensions": ["js", "json", "jsx", "yaml"],
+    "moduleNameMapper": {
+      "\\.scss$": "identity-obj-proxy"
+    },
+    "resolver": "browser-resolve",
+    "setupFiles": [
+      "<rootDir>/test/setupTest.js"
+    ],
+    "transform": {
+      "\\.yaml$": "yaml-jest",
+      "\\.jsx?$": "babel-jest"
+    },
+    "testResultsProcessor": "jest-sonar-reporter",
+    "testURL": "http://localhost:8080/my-application",
+    "verbose": true
+  }
+
