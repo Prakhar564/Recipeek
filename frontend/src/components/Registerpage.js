@@ -2,7 +2,7 @@ import {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
 import { ThemeContext } from '../App';
-
+import '../index.css'
 function Registerpage() {
 
   const [email, setEmail] = useState("")
@@ -28,18 +28,18 @@ function Registerpage() {
   return (
     <div className={theme}>
       <>
-        <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
+        <section className="vh-100" style={{ backgroundColor: "#9A626D" }}>
           <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col col-xl-10">
-                <div className="card" style={{ borderRadius: "1rem" }}>
+                <div className="card" style={{ borderRadius: "5rem" }}>
                   <div className="row g-0">
                     <div className="col-md-6 col-lg-5 d-none d-md-block">
                       <img
                         src="foodbasket.png"
                         alt="login form"
                         className="img-fluid"
-                        style={{borderRadius: "1rem 0 0 1rem" }}
+                        style={{ borderRadius: "5rem 0 0 5rem", objectFit: "contain", width: "100%", height: "100%" }}
                       />
                     </div>
                     <div className="col-md-6 col-lg-7 d-flex align-items-center">
@@ -110,9 +110,9 @@ function Registerpage() {
                           <a className="small text-muted" href="#!">
                             Forgot password?
                           </a>
-                          <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                          <p className="mb-5 pb-lg-2" style={{ color: "#556270" }}>
                             Already have an account?{" "}
-                            <Link to="/login" style={{ color: "#393f81" }}>
+                            <Link to="/login" style={{ color: "#EF476F" }}> 
                               Login Now
                             </Link>
                           </p>
@@ -135,7 +135,8 @@ function Registerpage() {
           {/* Copyright */}
           <div
             className="text-center p-3"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+            style={{ backgroundColor: "#FAD2E1" }}
+
           >
             © 2019 - till date Copyright:
             <a className="text-dark" href="https://mdbootstrap.com/">

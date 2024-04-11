@@ -26,14 +26,15 @@ function Loginpage() {
     <div className="container py-5 h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
         <div className="col col-xl-10">
-          <div className="card" style={{ borderRadius: "1rem" }}>
+          <div className="card" style={{ borderRadius: "5rem" }}>
             <div className="row g-0">
               <div className="col-md-6 col-lg-5 d-none d-md-block">
                 <img
                   src="foodbasket.png"
                   alt="login form"
                   className="img-fluid"
-                  style={{ borderRadius: "1rem 0 0 1rem" }}
+                  style={{ borderRadius: "5rem 0 0 5rem", objectFit: "contain", width: "100%", height: "100%" }}
+
                 />
               </div>
               <div className="col-md-6 col-lg-7 d-flex align-items-center">
@@ -115,7 +116,8 @@ function Loginpage() {
   <footer className="bg-light text-center text-lg-start">
     <div
       className="text-center p-3"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+      style={{ backgroundColor: "#FAD2E1" }}
+
     >
       © 2019 - till date Copyright:
       <a className="text-dark" href="https://mdbootstrap.com/">
