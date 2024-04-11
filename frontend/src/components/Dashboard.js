@@ -16,7 +16,7 @@ const Dashboard = (props) => {
   return (
     <div className={`dashboard-container ${themeClassName}`}>
       <Helmet>
-        <title>Dashboard - Charming Imaginary Sparrow</title>
+        <title>Dashboard -Recipeek</title>
         <meta
           property="og:title"
           content="Dashboard - Charming Imaginary Sparrow"
@@ -235,17 +235,13 @@ const Dashboard = (props) => {
               <div className="dashboard-line7"></div>
             </div>
             <div className="dashboard-container15">
-              <h1 className="dashboard-text29">
-                <span>
-                  Time To
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: ' ',
-                    }}
-                  />
+              <h1 className="dashboard-text29">Time to Cook<h/>
+<span>
+                  
+                                  
                 </span>
                 <br></br>
-                <span>Cook</span>
+                <span></span>
               </h1>
               <span className="dashboard-text33">
                 Once you&apos;ve found an appealing recipe from the search
