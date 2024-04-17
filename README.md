@@ -59,9 +59,9 @@ The Cypress tests are located in the 'cypress/integration' directory.
 ## Running Cypreass Tests Locally
 
 1. Install the project dependencies: 
-### 'npm install'
+### `npm install`
 2. Install Cypress locally as a dev dependency:
-### 'npm install cypress --save-dev' or 'yarn add cypress --dev'
+### `npm install cypress --save-dev` or `yarn add cypress --dev`
 3. Open Cypress Launchpad from your project root: 'npx cypress open' or 'yarn cypress open'
 4. Choosse a testing type from and kaubch from your preferred browser.
 
