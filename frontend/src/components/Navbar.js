@@ -55,7 +55,7 @@ function Navbar() {
               )}
               {/* Theme toggle switch */}
               <li className="nav-item">
-                <div className="nav-link">
+                <div data-test='Dark-mode' className="nav-link">
                   <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
                   <span style={{ marginLeft: '10px' }}>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</span>
                 </div>

@@ -47,3 +47,52 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ### `python manage.py runserver`
 
 This script will initialize the backend server, for the frontend.
+
+
+### Testing
+
+## Cypress E2E Testing
+
+Our projectuses Cypress for end-to-end(e2e) testing. 
+The Cypress tests are located in the 'cypress/integration' directory.
+
+## Running Cypreass Tests Locally
+
+1. Install the project dependencies: 
+### `npm install`
+2. Install Cypress locally as a dev dependency:
+### `npm install cypress --save-dev` or `yarn add cypress --dev`
+3. Open Cypress Launchpad from your project root: 
+`npx cypress open` or `yarn cypress open`
+4. Choosse a testing type from and kaubch from your preferred browser.
+
+### Test Cases
+
+The Cypress e2e test suite covers following critical functionalities:
+
+- User Authentication
+
+### Viewing Test Results
+
+Cypress provides a built-in test runner that allows you to view th test results and debug any failing tests. 
+
+
+## CircleCI Configuration
+
+We use CircleCi for continous integration. 
+Our CircleCI pipeline is configured in the '.circleci/config.yml' file.
+
+## CircleCi Pipeline
+
+The CircleCI pipeline perform the following steps:
+
+1. Install the project dependencies
+
+## Viewing the Test Reports
+
+CircleCI provides built-in support for displaying test results.
+After each succesful pipeline run, we can navigate to the "Tests" tab in the CircleCI UI to view the test results, including pass/fail status and any failes test cases
+
+### Triggernig the Pipeline 
+
+The CircleCI Pipeline is triggered on every commit and pull request to the repository.

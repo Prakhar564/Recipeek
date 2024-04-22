@@ -94,7 +94,7 @@ const Homepage = (props) => {
       <div className="home-hero">
         <div className="home-hero1 heroContainer">
           <div className="home-container01">
-            <h1 className="home-hero-heading heading1">Welcome to Recipeek</h1>
+            <h1 data-test="Recipeek-header" className="home-hero-heading heading1">Welcome to Recipeek</h1>
             <span className="home-hero-sub-heading bodyLarge">
               <span>
                 <span>
