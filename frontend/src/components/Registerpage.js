@@ -13,10 +13,10 @@ function Registerpage() {
   const {registerUser} = useContext(AuthContext)
   const { theme } = useContext(ThemeContext)
 
-  console.log(email);
-  console.log(username);
-  console.log(password);
-  console.log(password2);
+  // console.log(email);
+  // console.log(username);
+  // console.log(password);
+  // console.log(password2);
 
 
   const handleSubmit = async e => {
