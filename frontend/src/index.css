@@ -2764,14 +2764,18 @@ footer a.text-dark {
 
 /* Smart-cooking */
 
+
+
 .smart-cooking-container {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
 .smart-cooking-container input[type="text"] {
@@ -2783,36 +2787,28 @@ footer a.text-dark {
   margin-right: 10px;
 }
 
-.smart-cooking-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.content {
+  flex: 3;
 }
 
-.smart-cooking-container h2 {
-  margin-top: 20px;
+.sidebar h3 {
+  margin-top: 200px;
 }
 
-.smart-cooking-container ul {
+.sidebar ul,
+.content ul {
   list-style: none;
   padding: 0;
 }
 
-.smart-cooking-container ul li {
-  margin-bottom: 5px;
+.content h2 {
+  margin-top: 0%;
 }
 
-.smart-cooking-container h3 {
+.content h3 {
   margin-top: 20px;
 }
 
-.smart-cooking-container p {
-  margin-bottom: 10px;
-}
 
 
 /* Additional styles can be added as needed */
