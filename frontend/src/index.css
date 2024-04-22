@@ -2766,6 +2766,13 @@ footer a.text-dark {
 
 
 
+/* Set minimum height for the body */
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right,  #e4c6e9, #e4c6e9); /* Set a background color for the body */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .smart-cooking-container {
   display: flex;
   justify-content: space-between;
@@ -2775,7 +2782,6 @@ footer a.text-dark {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  
 }
 
 .smart-cooking-container input[type="text"] {
@@ -2789,10 +2795,11 @@ footer a.text-dark {
 
 .content {
   flex: 3;
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds container height */
 }
 
 .sidebar h3 {
-  margin-top: 200px;
+  margin-top: 0px;
 }
 
 .sidebar ul,

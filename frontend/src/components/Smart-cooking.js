@@ -10,7 +10,7 @@ const SmartCooking = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [recipeDetails, setRecipeDetails] = useState(null);
 
-  const API_KEY = '53b89ba3eb90450d957f2601488691f2';
+  const API_KEY = '0fea7dacbb8e4fd0944ab7cb9dc97cf5';
 
   const handleSearch = async (event) => {
     event.preventDefault();
@@ -113,7 +113,10 @@ const SmartCooking = () => {
               ))}
             </ul>
             <h3>Recipe Information</h3>
-            <p>{recipeDetails.recipeInfo.summary}</p>
+            <p>
+               {recipeDetails.recipeInfo.summary &&
+               recipeDetails.recipeInfo.summary.replace(/<a\b[^>](.*?),\/a>/gi,'[LINK_PLACEHOLDER]')}
+            </p>
             <p>Prep Time: {recipeDetails.recipeInfo.readyInMinutes} minutes</p>
             <p>Servings: {recipeDetails.recipeInfo.servings}</p>
           </div>
