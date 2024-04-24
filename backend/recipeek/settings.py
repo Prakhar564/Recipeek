@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Custom
-    
+    'api',
 
     # Third Party
     'import_export',
