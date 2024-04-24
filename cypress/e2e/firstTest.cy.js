@@ -5,6 +5,6 @@ describe('First Test', () => {
   })
   it('Dark mode works correctly', () => {
     cy.visit('http://localhost:3000/')
-    cy.get('[data-test="Dark-mode"]').click().pause()
+    cy.get('[data-test="Dark-mode"]').click()
   })
 })
