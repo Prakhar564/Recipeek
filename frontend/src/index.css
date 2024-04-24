@@ -1288,7 +1288,7 @@ footer a.text-dark {
   --background-color-light: #FFFFFF;
   --background-color-dark: #000000;
   --dl-space-space-oneandhalfunits: 24px;
-  --background-gradient-light: linear-gradient(to right, #383838 0%, #f1ef7c 100%);
+  --background-gradient-light: linear-gradient(to right, #fdd2d2 0%, #fffed2 100%);
   --background-gradient-dark: linear-gradient(to right, #000000 0%, #000000 100%);
   
 }
@@ -1689,7 +1689,7 @@ footer a.text-dark {
 .light .dashboard-sidebar {
   /* Linear gradient example - adjust colors as needed */
   background-image: linear-gradient(to right, #E69A8D, #F4978E);
-  color: #000;
+  color: #000000;
 }
 
 .light .dashboard-main-content {
@@ -1705,8 +1705,8 @@ footer a.text-dark {
 /* Dark theme styles */
 .dark .dashboard-sidebar,
 .dark .dashboard-main-content {
-  background-color: #f3efef;
-  color: #0f0101;
+  background-color: #f5d4d4;
+  color: #000000;
 }
 
 .dark nav a {
@@ -1725,14 +1725,14 @@ footer a.text-dark {
   border-color: var(--dl-color-gray-black);
   border-width: 1px;
   flex-direction: column;
-  background-image: linear-gradient(to right, #FFF2E6, #FFDAB9);
+  background-image: var(--background-gradient);
 }
 
 .dashboard-sidebar {
   width: 250px;
-  height: 700px;
+  height: 500px;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-fourunits);
   top: 5%;
   position: relative;
   align-self: flex-start;
@@ -1807,11 +1807,11 @@ footer a.text-dark {
   flex-direction: column;
 }
 .dashboard-text02 {
-  color:black;
+  color:rgb(255, 0, 0);
   font-size: 3rem;
 }
 .dashboard-text03 {
-  color: black;
+  color: rgb(255, 0, 0);
   margin-top: var(--dl-space-space-unit);
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
@@ -2298,7 +2298,7 @@ footer a.text-dark {
   font-size: 3rem;
 }
 .dashboard-text50 {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.15rem;
   max-width: 600px;
   margin-top: var(--dl-space-space-twounits);
@@ -2764,14 +2764,24 @@ footer a.text-dark {
 
 /* Smart-cooking */
 
+
+
+/* Set minimum height for the body */
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to right,  #e4c6e9, #e4c6e9); /* Set a background color for the body */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .smart-cooking-container {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .smart-cooking-container input[type="text"] {
@@ -2783,36 +2793,29 @@ footer a.text-dark {
   margin-right: 10px;
 }
 
-.smart-cooking-container button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.content {
+  flex: 3;
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds container height */
 }
 
-.smart-cooking-container h2 {
-  margin-top: 20px;
+.sidebar h3 {
+  margin-top: 0px;
 }
 
-.smart-cooking-container ul {
+.sidebar ul,
+.content ul {
   list-style: none;
   padding: 0;
 }
 
-.smart-cooking-container ul li {
-  margin-bottom: 5px;
+.content h2 {
+  margin-top: 0%;
 }
 
-.smart-cooking-container h3 {
+.content h3 {
   margin-top: 20px;
 }
 
-.smart-cooking-container p {
-  margin-bottom: 10px;
-}
 
 
 /* Additional styles can be added as needed */

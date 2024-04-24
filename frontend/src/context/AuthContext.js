@@ -80,6 +80,7 @@ export const AuthProvider = ({ children }) => {
                 email, username, password, password2
             })
         })
+        const data = await response.json();
         if(response.status === 201){
             history.push("/login")
             swal.fire({
@@ -92,10 +93,14 @@ export const AuthProvider = ({ children }) => {
                 showConfirmButton: false,
             })
         } else {
-            console.log(response.status);
-            console.log("there was a server issue");
+            let errorMessage = "";
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    errorMessage += `${data[key].join(", ")}\n`;
+                }
+            }
             swal.fire({
-                title: "An Error Occured " + response.status,
+                title: errorMessage,
                 icon: "error",
                 toast: true,
                 timer: 6000,

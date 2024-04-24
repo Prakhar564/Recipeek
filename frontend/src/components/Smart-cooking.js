@@ -1,6 +1,8 @@
+// SmartCooking.js
+
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../index.css'
+import '../index.css';
 
 const SmartCooking = () => {
   const [userInput, setUserInput] = useState('');
@@ -8,7 +10,7 @@ const SmartCooking = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [recipeDetails, setRecipeDetails] = useState(null);
 
-  const API_KEY = '53b89ba3eb90450d957f2601488691f2';
+  const API_KEY = '0fea7dacbb8e4fd0944ab7cb9dc97cf5';
 
   const handleSearch = async (event) => {
     event.preventDefault();
@@ -54,60 +56,72 @@ const SmartCooking = () => {
   };
 
   return (
-    <div>
-      <h1>Smart Cooking</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Enter ingredients"
-        />
-        <button type="submit">Search</button>
-      </form>
+    
+    <div className="smart-cooking-container">
+      <div className="sidebar">
+        {selectedRecipe && recipeDetails && (
+          <>
+            <h3>Nutrition Label</h3>
+            <div dangerouslySetInnerHTML={{ __html: recipeDetails.nutritionLabel }} />
+          </>
+        )}
+      </div>
+      <div className="content">
+        <h1>Smart Cooking</h1>
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Enter ingredients"
+          />
+          <button type="submit">Search</button>
+        </form>
 
-      {results.length > 0 && (
-        <div>
-          <h2>Search Results</h2>
-          <ul>
-            {results.map((result) => (
-              <li key={result.id} onClick={() => handleRecipeSelect(result.id)}>
-                {result.title}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {results.length > 0 && (
+          <div>
+            <h2>Search Results</h2>
+            <ul>
+              {results.map((result) => (
+                <li key={result.id} onClick={() => handleRecipeSelect(result.id)}>
+                  {result.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-      {selectedRecipe && recipeDetails && (
-        <div>
-          <h2>Selected Recipe: {recipeDetails.recipeInfo.title}</h2>
-          <h3>Instructions</h3>
-          <ul>
-            {recipeDetails.instructions.map((step) => (
-              <li key={step.number}>{step.step}</li>
-            ))}
-          </ul>
-          <h3>Ingredients</h3>
-          <ul>
-            {recipeDetails.ingredients.map((ingredient) => (
-              <li key={ingredient.id}>{ingredient.name}</li>
-            ))}
-          </ul>
-          <h3>Nutrition Label</h3>
-          <div dangerouslySetInnerHTML={{ __html: recipeDetails.nutritionLabel }} />
-          <h3>Equipment</h3>
-          <ul>
-            {recipeDetails.equipment.map((item) => (
-              <li key={item.id}>{item.name}</li>
-            ))}
-          </ul>
-          <h3>Recipe Information</h3>
-          <p>{recipeDetails.recipeInfo.summary}</p>
-          <p>Prep Time: {recipeDetails.recipeInfo.readyInMinutes} minutes</p>
-          <p>Servings: {recipeDetails.recipeInfo.servings}</p>
-        </div>
-      )}
+        {selectedRecipe && recipeDetails && (
+          <div>
+            <h2>Selected Recipe: {recipeDetails.recipeInfo.title}</h2>
+            <h3>Ingredients</h3>
+            <ul>
+              {recipeDetails.ingredients.map((ingredient) => (
+                <li key={ingredient.id}>{ingredient.name}</li>
+              ))}
+            </ul>
+            <h3>Equipment</h3>
+            <ul>
+              {recipeDetails.equipment.map((item) => (
+                <li key={item.id}>{item.name}</li>
+              ))}
+            </ul>
+            <h3>Instructions</h3>
+            <ul>
+              {recipeDetails.instructions.map((step) => (
+                <li key={step.number}>{step.step}</li>
+              ))}
+            </ul>
+            <h3>Recipe Information</h3>
+            <p>
+               {recipeDetails.recipeInfo.summary &&
+               recipeDetails.recipeInfo.summary.replace(/<a\b[^>](.*?),\/a>/gi,'[LINK_PLACEHOLDER]')}
+            </p>
+            <p>Prep Time: {recipeDetails.recipeInfo.readyInMinutes} minutes</p>
+            <p>Servings: {recipeDetails.recipeInfo.servings}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
