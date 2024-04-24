@@ -7,4 +7,12 @@ describe('First Test', () => {
     cy.visit('http://localhost:3000/')
     cy.get('[data-test="Dark-mode"]').click()
   })
+  it('Register page opens from homepage', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('[data-testid="register"]').click()
+  })
+  it('Login page opens from homepage', () => {
+    cy.visit('http://localhost:3000/')
+    cy.get('[data-testid="login"]').click()
+  })
 })

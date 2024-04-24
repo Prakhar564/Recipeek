@@ -100,7 +100,7 @@ function Registerpage() {
                             />
                           </div>
                           <div className="pt-1 mb-4">
-                            <button data-cy='rbutton'
+                            <button data-testid='registerbutton'
                               className="btn btn-dark btn-lg btn-block"
                               type="submit"
                             >

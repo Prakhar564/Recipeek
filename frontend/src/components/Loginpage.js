@@ -82,9 +82,9 @@ function Loginpage() {
                       </label>
                     </div>
                     <div className="pt-1 mb-4">
-                      <button
+                      <button 
                         className="btn btn-dark btn-lg btn-block"
-                        type="submit"
+                        data-cy='LoginSubmit' type="submit"
                       >
                         Login
                       </button>
