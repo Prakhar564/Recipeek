@@ -1288,7 +1288,7 @@ footer a.text-dark {
   --background-color-light: #FFFFFF;
   --background-color-dark: #000000;
   --dl-space-space-oneandhalfunits: 24px;
-  --background-gradient-light: linear-gradient(to right, #383838 0%, #f1ef7c 100%);
+  --background-gradient-light: linear-gradient(to right, #fdd2d2 0%, #fffed2 100%);
   --background-gradient-dark: linear-gradient(to right, #000000 0%, #000000 100%);
   
 }
@@ -1689,7 +1689,7 @@ footer a.text-dark {
 .light .dashboard-sidebar {
   /* Linear gradient example - adjust colors as needed */
   background-image: linear-gradient(to right, #E69A8D, #F4978E);
-  color: #000;
+  color: #000000;
 }
 
 .light .dashboard-main-content {
@@ -1705,8 +1705,8 @@ footer a.text-dark {
 /* Dark theme styles */
 .dark .dashboard-sidebar,
 .dark .dashboard-main-content {
-  background-color: #f3efef;
-  color: #0f0101;
+  background-color: #f5d4d4;
+  color: #000000;
 }
 
 .dark nav a {
@@ -1725,14 +1725,14 @@ footer a.text-dark {
   border-color: var(--dl-color-gray-black);
   border-width: 1px;
   flex-direction: column;
-  background-image: linear-gradient(to right, #FFF2E6, #FFDAB9);
+  background-image: var(--background-gradient);
 }
 
 .dashboard-sidebar {
   width: 250px;
-  height: 700px;
+  height: 500px;
   display: flex;
-  padding: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-fourunits);
   top: 5%;
   position: relative;
   align-self: flex-start;
@@ -1807,11 +1807,11 @@ footer a.text-dark {
   flex-direction: column;
 }
 .dashboard-text02 {
-  color:black;
+  color:rgb(255, 0, 0);
   font-size: 3rem;
 }
 .dashboard-text03 {
-  color: black;
+  color: rgb(255, 0, 0);
   margin-top: var(--dl-space-space-unit);
   font-weight: 600;
   margin-bottom: var(--dl-space-space-unit);
@@ -2298,7 +2298,7 @@ footer a.text-dark {
   font-size: 3rem;
 }
 .dashboard-text50 {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.15rem;
   max-width: 600px;
   margin-top: var(--dl-space-space-twounits);
