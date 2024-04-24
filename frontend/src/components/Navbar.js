@@ -45,6 +45,7 @@ function Navbar() {
 
               {token && (
                 <>
+                
                   <li className="nav-item">
                     <Link className="nav-link" to="/dashboard">Dashboard</Link>
                   </li>
