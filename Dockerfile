@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --upgrade pip
 
 # Install Python dependencies
-COPY ./backend/requirements.txt /app/
+COPY ./requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # Prepare frontend dependencies
