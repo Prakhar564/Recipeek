@@ -107,11 +107,42 @@ const SmartCooking = () => {
               ))}
             </ul>
             <h3>Instructions</h3>
-            <ul>
-              {recipeDetails.instructions.map((step) => (
-                <li key={step.number}>{step.step}</li>
-              ))}
-            </ul>
+            
+<ul>
+  {recipeDetails.instructions.map((instruction, index) => (
+    <li key={index}>
+      {instruction.steps.map((step, stepIndex) => (
+        <div key={`${index}-${stepIndex}`}>
+          <p>{step.number}. {step.step}</p>
+          {step.ingredients.length > 0 && (
+            <div>
+              <strong>Ingredients:</strong>
+              <ul>
+                {step.ingredients.map((ingredient, ingredientIndex) => (
+                  <li key={`${index}-${stepIndex}-${ingredientIndex}`}>
+                    {ingredient.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {step.equipment.length > 0 && (
+            <div>
+              <strong>Equipment:</strong>
+              <ul>
+                {step.equipment.map((equipment, equipmentIndex) => (
+                  <li key={`${index}-${stepIndex}-${equipmentIndex}`}>
+                    {equipment.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </li>
+  ))}
+</ul>
             <h3>Recipe Information</h3>
             <p>
                {recipeDetails.recipeInfo.summary &&
