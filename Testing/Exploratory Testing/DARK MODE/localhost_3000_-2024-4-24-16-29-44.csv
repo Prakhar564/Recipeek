@@ -1,0 +1,6 @@
+,OS: Windows 11 | Browser: Chrome 124 | Resolution: 1536x816 | Time: 24 Apr 2024 / 16:29:44  EDT
+#,Step,Data,Exp Result,XPath,cssSelector
+1,Open website,http://localhost:3000/,,,
+2,Click on "Welcome to RecipeekYour Ultimate Cloud-Based Recipe Application Get Started NowLearn More →",,,//div[@class='home-hero1 heroContainer'],.home-hero1.heroContainer
+3,Click on "Light Mode",,,//div[@class='react-switch-bg'],.react-switch-bg
+4,Click on "Dark Mode",,,//div[@class='react-switch-bg'],.react-switch-bg

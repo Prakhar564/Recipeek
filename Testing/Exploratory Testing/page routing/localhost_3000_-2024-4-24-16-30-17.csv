@@ -1,0 +1,7 @@
+,OS: Windows 11 | Browser: Chrome 124 | Resolution: 1536x816 | Time: 24 Apr 2024 / 16:30:17  EDT
+#,Step,Data,Exp Result,XPath,cssSelector
+1,Open website,http://localhost:3000/,,,
+2,Click on "HomeDashboardLogoutDark Mode",,,//div[@class='container-fluid'],.container-fluid
+3,Click on "Home",,,//a[normalize-space()='Home'],.nav-link.active
+4,Click on "Dashboard",,,//a[normalize-space()='Dashboard'],body > div:nth-child(1) > div:nth-child(1) > nav:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)
+5,Scroll down,,,//a[normalize-space()='Dashboard'],

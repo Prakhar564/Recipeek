@@ -1,0 +1,15 @@
+,OS: Windows 11 | Browser: Chrome 124 | Resolution: 1536x816 | Time: 24 Apr 2024 / 16:32:50  EDT
+#,Step,Data,Exp Result,XPath,cssSelector
+1,Open website,http://localhost:3000/,,,
+2,Click on "HomeDashboardLogoutDark Mode",,,//div[@class='container-fluid'],.container-fluid
+3,Click on "Dashboard",,,//a[normalize-space()='Dashboard'],body > div:nth-child(1) > div:nth-child(1) > nav:nth-child(1) > div:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)
+4,Click on "Smart Cooking",,,,
+5,Click on "Search",,,//div[@class='content']//form,body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > form:nth-child(2)
+6,Enter "chicken" into "Enter ingredients",chicken,,//input[@placeholder='Enter ingredients'],input[placeholder='Enter ingredients']
+7,Click on "Search",,,//button[normalize-space()='Search'],button[type='submit']
+8,Click on "Light Mode",,,//div[@class='react-switch-handle'],.react-switch-handle
+9,Click on "Buffalo Chicken Wings Wonton Wraps",,,//li[normalize-space()='Buffalo Chicken Wings Wonton Wraps'],body > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > ul:nth-child(2) > li:nth-child(9)
+16,Scroll up,,,//li[normalize-space()='Buffalo Chicken Wings Wonton Wraps'],
+17,Scroll down,,,//li[normalize-space()='Buffalo Chicken Wings Wonton Wraps'],
+20,Scroll up,,,//p[normalize-space()='Prep Time: 45 minutes'],
+21,Double click on "Enter ingredients",,,//input[@placeholder='Enter ingredients'],input[placeholder='Enter ingredients']
