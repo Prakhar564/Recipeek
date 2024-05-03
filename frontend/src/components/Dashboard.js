@@ -31,7 +31,7 @@ const Dashboard = (props) => {
           <Link to="/recipe-book" className="dashboard-navlink1">
             Recipe Book
           </Link>
-          <Link to="/smart-cooking" className="dashboard-navlink2">
+          <Link to="/smart-cooking" className="dashboard-navlink2" data-testid= 'Smart-Cooking'>
             Smart Cooking
           </Link>
           <span className="dashboard-text01">Team</span>
