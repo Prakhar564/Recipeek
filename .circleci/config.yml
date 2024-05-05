@@ -1,14 +1,45 @@
 version: 2.1
+
 orbs:
-  node: circleci/node@4.1
+  node: circleci/node@5.2.0
+
 jobs:
   build:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: '18.16.0'
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-          
       - run:
-          command: npm run build
-          name: Build app
+          name: Run tests
+          command: npm test
+
+  deploy:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            python3 -m venv env
+            . env/bin/activate
+            pip install -r requirements.txt
+      - run:
+          name: Run server
+          command: python manage.py runserver
+          background: true
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
